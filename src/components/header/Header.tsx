@@ -19,6 +19,7 @@ export default function Header (): ReactElement {
     // let isMounted: boolean = false;
     const [windowWidth, setWindowWidth] = useState<number>(0);
     let isSideBarClosed: boolean = true;
+
     function animateSideBar (): void {
         const rightPos: number | string = isSideBarClosed && windowWidth <= windowSizes.tablet ? 0 : "-18rem";
         isSideBarClosed = !isSideBarClosed;
@@ -45,7 +46,7 @@ export default function Header (): ReactElement {
             <div className="h-7 bg-black flex justify-between pl-6 pr-6 w-full items-center text-white">
                 <div className="flex space-x-2 w-9/12">
                     <p>Maputo 35º C</p>
-                    <p className="max-md:hidden block"> Sexta-feira, 21 de setembro 2024</p>
+                    <p className="max-md:hidden block"> Segunda-feira, 21 de outubro 2024</p>
                 </div>
                 <div className="flex justify-evenly items-center w-2/12 ">
                     <a className="hover:text-main transition-colors duration-200" href={socialNetwork.github}><FaGithub size={20} /></a>
